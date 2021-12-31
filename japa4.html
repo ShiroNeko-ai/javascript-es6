@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMG Picker</title>
+    <link rel="stylesheet" href="japa.css">
+    <!-- JavaSript -->
+    <script>
+        function pilih(){
+            let list_ahnaf = document.getElementById("Faiz");
+            let idx = list_ahnaf.selectedIndex;
+            let area_gambar=document.getElementById("gambar");
+            area_gambar.src= list_ahnaf[idx].value+".jpg";
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li><a href="japa1.html">Login</a></li>
+        <li><a href="japa2.html">Kurs</a></li>
+        <li><a href="japa3.html">Chat</a></li>
+        <li><a href="japa4.html">Img Picker</a></li>
+        <li><a href="japa5.html">Tiket</a></li>
+      </ul>
+      <div class="container">
+           <h1>FOTO AING</h1>
+            <select id="Faiz" onchange="pilih()">
+                <option value="foto1">Buruk</option>
+                <option value="foto2">Lumayan</option>
+                <option value="foto3">Tamvan</option>
+                <option value="foto4">Tamvan dan berani</option>    
+            </select>
+        <br/>
+        
+        <img src="foto1.jpg" alt="foto1" id="gambar"/>
+      </div>
+</body>
+</html>
